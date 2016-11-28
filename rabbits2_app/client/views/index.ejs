@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Rabbits!</title>
+		<!-- <link rel="stylesheet" href="./main.css" charset="utf-8"/> -->
+	</head>
+	<body>
+				<h2>Welcome to the Rabbits Page!</h2>
+				<form action="/rabbits" method ="POST">
+					<p>Rabbit Name:<input type="text" name="name" placeholder="Your Name">
+					</p>
+					<p>Rabbit's Fave Food:<input type="text" name="fave_food" placeholder="Your Favorite Food"></p>
+					Rabbit's Location: <select  type="text" name="location">
+  	  		<option>Brooklyn</option>
+  		  	<option>Los Angeles</option>
+  		  	<option>Seattle</option>
+  		  	<option>Chicago</option>
+  		  	<option>Miami</option>
+  		  	<option>Washington DC</option></select>
+
+				 <button type="submit" value= "submit">Add Rabbit!</button>
+
+				</form>
+							<hr>
+<% 				for (var i =0; i < rabbits.length; i++){
+%>
+							<h4>Rabbit's Name: <a href="/rabbits/<%=rabbits[i].id%>"><%= rabbits[i].name %></a></h4>
+							<p>Rabbit's Fave Food: <%= rabbits[i].fave_food %></p>
+							<p>Rabbit's Location: <%= rabbits[i].location %></p>
+							<hr>
+<% 				}
+%>
+	</body>
+</html>

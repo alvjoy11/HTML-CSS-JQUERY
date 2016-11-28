@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Edit / Show Rabbit</title>
+	</head>
+	<body>
+		  	<h2>View your Info and Edit / Delete your Info</h2>
+
+				<h4>Rabbit's Name: <%= rabbits.name %></h4>
+				<p>Rabbit's Fave Food: <%= rabbits.fave_food %></p>
+				<p>Rabbit's Location: <%= rabbits.location %></p>
+				<hr>
+
+				<form action="/rabbits/<%=rabbits.id%>" method="POST">
+						<label>Rabbit Name:<input type="text" name="name" value="<%= rabbits.name %>"></label>
+						<label>Rabbit's Fave Food:<input type="text" name="fave_food" value="<%= rabbits.fave_food %>"></label>
+						<label>Rabbit's Location: <select type="text" name="location">
+			  	  		<option>Brooklyn</option>
+			  		  	<option>Los Angeles</option>
+			  		  	<option>Seattle</option>
+			  		  	<option>Chicago</option>
+			  		  	<option>Miami</option>
+			  		  	<option>Washington DC</option></select>
+						</label>
+					 <button>Edit Your Info</button>
+				</form>
+				<form action="/rabbits/<%=rabbits.id%>/remove" method="post">
+						<input type="submit" value="Delete">
+				</form>
+				<hr>
+	</body>
+</html>

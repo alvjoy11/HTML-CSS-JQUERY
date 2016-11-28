@@ -1,0 +1,23 @@
+h1{
+	color: #8080ff;
+	display: inline-block;
+	margin: 17px;
+}
+
+
+img{
+	padding: 11px;
+	display: inline-block;
+	float: left;
+}
+
+#wrapper{
+	width: 100%;
+	height: 950px;
+	display: block;
+	background-color: black;
+}
+
+/*.cat{
+	height: 400px;
+}*/

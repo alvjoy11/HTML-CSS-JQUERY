@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Survey Form</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('form').submit(function(){
+					$.get('/results', function(data){
+
+					})
+				})
+			});
+		</script>
+		<link rel="stylesheet" href="./main.css" charset="utf-8"/>
+	</head>
+	<body>
+		<div id="wrapper">
+  		<div id ="main_content">
+  			<form action='/results' method='POST'>
+  			Your Name: <input type="text" name="name">
+  			Dojo Location: <select name="location">
+  	  		<option>Burbank</option>
+  		  	<option>Seattle</option>
+  		  	<option>Mountain View</option>
+  		  	<option>Chicago</option>
+  		  	<option>Dallas</option>
+  		  	<option>Washington DC</option></select>
+
+  		  	Favorite Language: <select name="language">
+  	  		<option>Python</option>
+  		  	<option>Ruby</option>
+  		  	<option>Javascript</option>
+					<option>French</option>
+  		  	</select>
+  		  	<p>Comments (optional):</p>
+  	    	<textarea name="comment"></textarea>
+   			<button type="submit" value= "submit">Submit
+   			</button>
+  			</form>
+  		</div>
+	</div>
+	</body>
+</html>

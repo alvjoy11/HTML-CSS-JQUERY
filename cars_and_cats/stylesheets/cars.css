@@ -1,0 +1,23 @@
+h1{
+	color: #8080ff;
+	display: inline-block;
+	margin: 17px;
+}
+
+
+img{
+	padding: 11px;
+	display: inline-block;
+	float: right;
+}
+
+#wrapper{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	background-color: black;
+}
+
+.car{
+	height: 400px;
+}
